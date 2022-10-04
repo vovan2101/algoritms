@@ -64,10 +64,23 @@
 #     return fib(n - 1) + fib(n - 2)
 # print(fib(5))
 
-def palindrom(s):
-    if len(s) <= 1:
-        return True
-    if s[0] != s[-1]:
-        return False
-    return palindrom(s[1:-1])
-print(palindrom('шалаш'))
+# def palindrom(s):
+#     if len(s) <= 1:
+#         return True
+#     if s[0] != s[-1]:
+#         return False
+#     return palindrom(s[1:-1])
+# print(palindrom('шалаш'))
+#
+# def greet(name):
+#     print('Hello, ' + name + '!')
+#     greet2(name)
+#     print('Getting ready to say bye...')
+#     bye()
+#
+# def greet2(name):
+#     print('How are you, ' + name + '?')
+#
+# def bye():
+#     print('Ok, bye')
+# greet('Vlad')
