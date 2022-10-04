@@ -84,3 +84,30 @@
 # def bye():
 #     print('Ok, bye')
 # greet('Vlad')
+
+# def sum_num(arr):
+#     total = 0
+#     for i in arr:
+#         total += i
+#     return total
+# print(sum_num([1,2,3,4,5]))
+
+# def sum_num(arr):
+#     if arr == []:
+#         return 0
+#     return arr[0] + sum(arr[1:])
+#
+# print(sum_num([1,2,3,4,5,6,7]))
+
+# def rec(s):
+#     if len(s) == 1 or len(s) == 2:
+#         return s
+#     return s[0] +'('+ rec(s[1:-1])     + ')' + s[-1]
+# s = input()
+# print(rec(s))
+
+# def rec(s):
+#     if len(s) <= 1:
+#         return s
+#     return s[0] + '*' + rec(s[1:-1]) + '*' + s[-1]
+# print(rec('asdhsahdjklasdlasldkasdasdag'))
