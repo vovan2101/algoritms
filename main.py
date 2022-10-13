@@ -170,15 +170,17 @@
 # print(book)
 # print(book['Avocado'])
 
-voted = {}
-
-def check_voter(name):
-    if voted.get(name):
-        print('Fick him!!')
-    else:
-        voted[name] = True
-        print('Let him in')
-
-
+# voted = {}
+#
+# def check_voter(name):
+#     if voted.get(name):
+#         print('Fick him!!')
+#     else:
+#         voted[name] = True
+#         print('Let him in')
+#
+graph = {}
+graph['you'] = ['Alice', 'bob', 'claire']
+print(graph)
 
 
