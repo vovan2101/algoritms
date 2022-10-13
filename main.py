@@ -139,17 +139,20 @@
 # print(quicksort([10, 5, 2, 3]))
 
 
-import webbrowser
+import collections
 
-def validator(func):
-    def wrapper(url):
-        print("Это текст до функции")
-        func(url)
-        print("Это текст после функции")
-    return wrapper
+card = collections.namedtuple('card', ['rank', 'suit'])
 
-@validator
-def open_url(url):
-    webbrowser.open(url)
+class FrenchDeck:
+    ranks = [str(n) for n in range (2, 11)] + list('JQKA')
+    suits = 'spades diamonds clubs hearts'.split()
 
-open_url("https://itproger.com")
+    def __init__(self):
+        self._cards = [card(rank, suit) for suit in self.suits
+                                        for rank in self.ranks]
+
+    def __len__(self):
+        return len(self._cards)
+
+    def __getitem__(self, position):
+        return self._cards[position]
