@@ -139,20 +139,46 @@
 # print(quicksort([10, 5, 2, 3]))
 
 
-import collections
+# import collections
+#
+# card = collections.namedtuple('card', ['rank', 'suit'])
+#
+# class FrenchDeck:
+#     ranks = [str(n) for n in range (2, 11)] + list('JQKA')
+#     suits = 'spades diamonds clubs hearts'.split()
+#
+#     def __init__(self):
+#         self._cards = [card(rank, suit) for suit in self.suits
+#                                         for rank in self.ranks]
+#
+#     def __len__(self):
+#         return len(self._cards)
+#
+#     def __getitem__(self, position):
+#         return self._cards[position]
+#
+# suit_values = dict(spades=3, hearts=2, diamonds=1, clubs=0)
+#
+# def spades_high(card):
+#     rank_value = FrenchDeck.ranks.index(card.rank)
+#     return rank_value * len(suit_values) + suit_values[card.suit]
 
-card = collections.namedtuple('card', ['rank', 'suit'])
+# book = dict()
+# book['Apple'] = 0.82
+# book['Milk'] = 1.25
+# book['Avocado'] = 4.20
+# print(book)
+# print(book['Avocado'])
 
-class FrenchDeck:
-    ranks = [str(n) for n in range (2, 11)] + list('JQKA')
-    suits = 'spades diamonds clubs hearts'.split()
+voted = {}
 
-    def __init__(self):
-        self._cards = [card(rank, suit) for suit in self.suits
-                                        for rank in self.ranks]
+def check_voter(name):
+    if voted.get(name):
+        print('Fick him!!')
+    else:
+        voted[name] = True
+        print('Let him in')
 
-    def __len__(self):
-        return len(self._cards)
 
-    def __getitem__(self, position):
-        return self._cards[position]
+
+
