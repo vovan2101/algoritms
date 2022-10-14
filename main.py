@@ -215,7 +215,7 @@
 # graph['b']['fin'] = 5
 # graph['fin'] = {}
 
-stations = {}
-stations['kone'] = set(['id', 'nv', 'ut'])
-stations['ktwo'] = set(['wa', 'id', 'mt'])
+# stations = {}
+# stations['kone'] = set(['id', 'nv', 'ut'])
+# stations['ktwo'] = set(['wa', 'id', 'mt'])
 
