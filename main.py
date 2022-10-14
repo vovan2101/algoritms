@@ -179,28 +179,38 @@
 #         voted[name] = True
 #         print('Let him in')
 #
+# graph = {}
+# graph['you'] = ['alice', 'bob', 'claire']
+# print(graph)
+#
+# def person_is_seller(name):
+#     return name == 'claire'
+#
+# from collections import deque
+#
+# def search(name):
+#     search_queue = deque()
+#     search_queue += graph[name]
+#     searched = []
+#     while search_queue:
+#         person = search_queue.popleft()
+#         if not person in searched:
+#             if person_is_seller(person):
+#                 print(person + 'is mango seller!')
+#             else:
+#                 search_queue += graph[person]
+#                 searched.append(person)
+#         return False
+#
+#
+# search('you')
 graph = {}
-graph['you'] = ['alice', 'bob', 'claire']
-print(graph)
-
-def person_is_seller(name):
-    return name == 'claire'
-
-from collections import deque
-
-def search(name):
-    search_queue = deque()
-    search_queue += graph[name]
-    searched = []
-    while search_queue:
-        person = search_queue.popleft()
-        if not person in searched:
-            if person_is_seller(person):
-                print(person + 'is mango seller!')
-            else:
-                search_queue += graph[person]
-                searched.append(person)
-        return False
-
-
-search('you')
+graph['start'] = {}
+graph['start']['a'] = 6
+graph['start']['b'] = 2
+graph['a'] = {}
+graph['a']['fin'] = 1
+graph['b'] = {}
+graph['b']['a'] = 3
+graph['b']['fin'] = 5
+graph['fin'] = {}
